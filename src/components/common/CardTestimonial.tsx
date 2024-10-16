@@ -7,7 +7,7 @@ interface CardTestimonialProps {
 
 export default function CardTestimonial({text , Name}: CardTestimonialProps) {
   return (
-    <CardSpotlight className="h-48 w-96 flex flex-col justify-center items-center">
+    <CardSpotlight className="h-48 md:w-96 w-full flex flex-col justify-center items-center">
       <p className="text-xl font-bold relative z-20 mt-2 text-white">
       {text}
       </p>

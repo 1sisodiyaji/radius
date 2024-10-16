@@ -34,7 +34,7 @@ const AnimatedCard = ({ src, title, end, suffix = '', duration }) => {
   return (
     <div
       ref={ref} // Element will be observed when it comes into view
-      className="text-center shadow-2xl rounded-lg p-3 w-64 items-center flex flex-col justify-center"
+      className="text-center shadow-2xl rounded-lg p-3 md:w-64 items-center flex flex-col justify-center border border-gray-300"
     >
       <Image
         src={src}
@@ -44,7 +44,7 @@ const AnimatedCard = ({ src, title, end, suffix = '', duration }) => {
         className="hover:scale-105 transition-transform ease-out cursor-pointer"
       />
       <h5 className="mt-4">{title}</h5>
-      <h1 className="text-5xl bg-gradient-to-r from-[#8B3BAE] to-[#B44C73] bg-clip-text text-transparent  font-bold">
+      <h1 className="text-5xl  bg-gradient-to-r from-[#8B3BAE] to-[#B44C73] bg-clip-text text-transparent  font-bold">
         {count}
         {suffix}
       </h1>
@@ -55,9 +55,9 @@ const AnimatedCard = ({ src, title, end, suffix = '', duration }) => {
 const Trust = () => {
   return (
     <div className="relative flex flex-col items-center max-w-screen-xl  mx-auto md:flex-row">
-      <div className="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10">
+      <div className="flex items-center py-5 md:w-1/2 md:pb-20 pt-10">
         <div>
-          <h2 className="text-4xl font-bold mb-8 leading-12 text-center">
+          <h2 className="md:text-4xl text-3xl font-bold mb-8 leading-12 text-center">
             Trust, Reliability & Credibility
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-4">
