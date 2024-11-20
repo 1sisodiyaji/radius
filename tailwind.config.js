@@ -1,3 +1,5 @@
+import daisyui from "daisyui"
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,11 +9,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
+      colors: {  
+        white: "#FFFFFF",
+        lightGreen: "#D3EDE3",
+        orange: "#EFA153",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
     },
   },
-  plugins: [],
+  plugins: [daisyui],
 };
