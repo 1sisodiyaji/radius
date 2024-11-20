@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react";
-import Image from "next/image"; // Assuming you're using Next.js, but use an <img> tag if you're using plain React
+import Image from "next/image";
 
 const LogoCarousel = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -34,7 +34,7 @@ const LogoCarousel = () => {
       >
         {logos.concat(logos).map((logo, index) => (
           <div key={index} className="flex-shrink-0">
-            <Image src={logo} alt={`Logo ${index}`} width={100} height={50} />
+            <Image src={logo} alt={`Logo ${index}`} width={80} height={40} />
           </div>
         ))}
       </div>

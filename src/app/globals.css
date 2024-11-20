@@ -2,24 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #F5F5F5;
-  --foreground: #181818;
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: poppins;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
 }
-
+ 
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Edge */
+}
 
 @keyframes customBounce {
   0%, 100% {
@@ -34,8 +25,6 @@ body {
   animation: customBounce 1s ease-in-out infinite;
 }
 
-
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -48,3 +37,4 @@ body {
 .animate-scroll {
   animation: scroll linear infinite;
 }
+

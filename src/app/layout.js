@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased overflow-x-hidden scrollbar-hidden`}>
+      <body className={`${poppins.variable} antialiased overflow-x-hidden scrollbar-hidden bg-[#F5F5F5]`}>
         <Navbar/>
         {children}
       </body>
