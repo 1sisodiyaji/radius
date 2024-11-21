@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <>
       <div className="bg-gradient-to-b from-white via-lightGreen to-orange h-screen text-black">
-        <div className="container mx-auto flex flex-col items-center justify-center md:pt-32">
+        <div className="container mx-auto flex flex-col items-center justify-center md:pt-[12vh]">
           <h1 className=" text-4xl text-center font-regular tracking-widest leading-snug ">
             An Omnichannel Interaction <br />
             System that is{" "}
@@ -46,8 +46,8 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="flex justify-around item-center md:pt-12">
-          <div className="hover:transition hover:translate-x-24 hover:duration-300">
+        <div className="flex justify-around item-center md:pt-12 h-[100vh]">
+          <div>
             <PhoneMockup
               src={
                 "https://res.cloudinary.com/dvgs9khxj/image/upload/v1732025248/Phone-Mockup_fck6qn.png"
@@ -62,13 +62,12 @@ const Hero = () => {
                   autoPlay
                   muted
                   loop
-                  controls
-                  style={{ width: "100%", height: "350px" }}
+                  style={{ width: "100%", height: "310px" }}
                 ></video> 
             </div>
           </div>
 
-          <div className="hover:transition hover:translate-y-24 hover:duration-300">
+          <div>
             <PhoneMockup
               src={
                 "https://res.cloudinary.com/dvgs9khxj/image/upload/v1732025248/Phone-Mockup_fck6qn.png"

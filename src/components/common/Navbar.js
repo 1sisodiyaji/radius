@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 const Navbar = () => {
   return (
-    <div className="navbar bg-white md:px-20 text-black fixed">
+    <div className="navbar bg-white md:px-20 text-black ">
   <div className="navbar-start  ">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -69,7 +69,7 @@ const Navbar = () => {
           </ul>
         </details>
       </li>
-      <li><a href='/pricing'>Pricing</a></li>
+      <li><a href='/support'>Support</a></li>
     </ul>
   </div>
   <div className="navbar-end  ">
