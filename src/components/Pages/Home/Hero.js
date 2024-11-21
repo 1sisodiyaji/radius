@@ -66,18 +66,17 @@ const Hero = () => {
             </div> 
 
           <div className="custom-bounce">
-            <div className="mockup-window bg-base-300">
+            <div className="mockup-window bg-base-300" style={{ width: "55vw", height: "50vh" }}>
               <video
                 src="https://res.cloudinary.com/dbqq41bpc/video/upload/v1732085930/Factory_of_3D_Animations_free_gm5cio.mp4"
                 autoPlay
                 muted
-                loop
-                style={{ width: "100%", height: "350px" }}
+                loop 
               ></video>
             </div>
           </div>
 
-            <div className="max-w-sm max-h-28 text-center p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 animate-pulse">
+            <div className="max-w-sm max-h-28 text-center p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 animate-pulse hover:cursor-pointer">
             <h5 className="mb-2  "><AnimatedNumber targetNumber={24} textColor={'green'} prefix = {'* 7'}/>  </h5>
               <p className="font-normal text-gray-700">Multichannel Support.</p>
             </div> 
