@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/common/Navbar";
+import MouseFollower from "@/helpers/MouseFollower";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.variable} antialiased overflow-x-hidden scrollbar-hidden bg-[#F5F5F5]`}>
+       <MouseFollower/>
         <Navbar/>
         {children}
       </body>

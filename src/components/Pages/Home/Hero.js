@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import AnimatedNumber from '@/components/common/AnimatedNumber';
+import MeetingButton from "@/components/common/MeetingButton";
 
 const Hero = () => {
   const [text, setText] = useState("Secure");
@@ -40,11 +41,10 @@ const Hero = () => {
               {text}{" "}
             </span>
           </h1>
-
-          <div className="pt-8 space-x-4">
-            <button className="btn bg-[#C2E9DB] font-light shadow-sm hover:bg-[#1A776F] hover:text-white text-black">
-              Book Your Demo
-            </button>
+            <p className="py-2">Orchestrate intelligent customer interactions on the centralized cloud based platform .</p>
+          <div className="pt-8 space-x-4 flex">
+            
+            <MeetingButton text={'Book Your Demo'}/>
             <button className=" rounded-lg border border-[#1A776F] py-3 px-3 font-light text-black">
               See Our Tools
             </button>
