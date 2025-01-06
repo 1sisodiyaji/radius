@@ -26,7 +26,7 @@ export async function GET(request: NextRequest,{params,
     
     const blog = await Blogs.findOne({ slug});
 
-    if (!blog) {
+    if (!blog._id) {
       return NextResponse.json({ error: "Blog not found" }, { status: 404 });
     }
 
@@ -38,6 +38,7 @@ export async function GET(request: NextRequest,{params,
       deviceModel: DeviceDetails;
       locationData: LocationData; 
     };
+
     await Tracking.create(
       { blogId: blog._id, ip, deviceModel },
       {
