@@ -11,10 +11,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "via.placeholder.com",
       }, 
-      {
+      { 
         protocol: "https",
         hostname: "assets.aceternity.com",
       },
+      {
+        protocol: "https",
+        hostname: "pbs.twimg.com",
+      }, 
     ],
   },
 };

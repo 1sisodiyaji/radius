@@ -6,18 +6,18 @@ import React from 'react'
 
 const CarrerHero = () => {
   return (
-   <>
-   
-   <div className="py-24 mb-4 flex flex-col justify-center items-center gap-6">
-                    <AnimatedGradientText text={'🎉A small marketting line or a good starting line'} className={' text-center text-black dark:text-white'} />
+    <>
 
-                    <GradualSpacing text="Help Business to Grow rapidaly without " className="text-5xl text-black dark:text-white" />
-                    <GradualSpacing text="having an redudnacy of communication gap" className="text-5xl text-black dark:text-white" />
+      <div className="py-24 mb-4 flex flex-col justify-center items-center gap-6">
+        <AnimatedGradientText text={'🚀 Join Our Amazing Team!'} className={'text-center text-black dark:text-white'} />
 
-                    <ShimmerButton shimmerColor="#f76716" text="See All Opening" className='text-white dark:text-white' />
-                </div>
-                <WobbleCardDemo />
-   </>
+        <GradualSpacing text="We’re looking for passionate individuals" className="text-5xl text-black dark:text-white" />
+        <GradualSpacing text="to help drive innovation and make an impact." className="text-5xl text-black dark:text-white" />
+
+        <ShimmerButton shimmerColor="#f76716" text="See All Openings" className='text-white dark:text-white' />
+      </div>
+      <WobbleCardDemo />
+    </>
   )
 }
 
