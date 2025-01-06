@@ -10,6 +10,8 @@ export interface LocationData {
   lon: number;
   timezone: string;
   query: string; 
+  zip?: string;
+  isp?: string;
 }
 
 export interface Tracking {
@@ -36,17 +38,19 @@ const LocationSchema = new Schema<LocationData>({
   lat: { type: Number, default: 0 },
   lon: { type: Number, default: 0 },
   timezone: { type: String, default: "Unknown" },
-  query: { type: String , default: "Unknown"}, 
+  query: { type: String , default: "Unknown"},
+  zip: { type: String ,default: "000000"},
+  isp: { type: String ,default: "radius"}, 
 });
 
 const TrackingSchema = new Schema<Tracking>(
   {
     blogId:  { type: Schema.Types.ObjectId, ref: "Blogs", required: true },
-    ip: { type: String, required: true, index: true },
-    deviceModel: { type: String, default: "Unknown Device", required: true },
-    browser: { type: String, default: "Unknown Browser", required: true },
-    os: { type: String, default: "Unknown OS", required: true },
-    userAgent: { type: String },
+    ip: { type: String, index: true },
+    deviceModel: { type: String, default: "Unknown Device" },
+    browser: { type: String, default: "Unknown Browser" },
+    os: { type: String, default: "Unknown OS"},
+    userAgent: { type: String,default: "Unknown Agent" },
     location: { type: LocationSchema, default: {} },
     timing: {
       firstHit: { type: Date, required: true ,default: Date.now },
