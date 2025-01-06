@@ -9,23 +9,23 @@ const JobProcess = () => {
                     <h2 className='text-4xl capitalize font-semibold'> Your Hiring Journey </h2>
                     <div className='flex justify-center items-center gap-6 md:flex-row flex-col'>
                         <GlowingStarsBackgroundCard>
-                            <GlowingStarsTitle children="Apply Form" />
-                            <GlowingStarsDescription children="Firstly you have to apply form " />
+                            <GlowingStarsTitle title="Apply Form" />
+                            <GlowingStarsDescription text="Firstly you have to apply form " />
                         </GlowingStarsBackgroundCard>
 
                         <GlowingStarsBackgroundCard>
-                            <GlowingStarsTitle children="Interview" />
-                            <GlowingStarsDescription children="Firstly you have to apply form" />
+                            <GlowingStarsTitle title="Interview" />
+                            <GlowingStarsDescription text="Firstly you have to apply form" />
                         </GlowingStarsBackgroundCard>
 
                         <GlowingStarsBackgroundCard>
-                            <GlowingStarsTitle children="Interview - II" />
-                            <GlowingStarsDescription children="Firstly you have to apply form" />
+                            <GlowingStarsTitle title="Interview - II" />
+                            <GlowingStarsDescription text="Firstly you have to apply form" />
                         </GlowingStarsBackgroundCard>
 
                         <GlowingStarsBackgroundCard>
-                            <GlowingStarsTitle children="Grab Your Job" />
-                            <GlowingStarsDescription children="Firstly you have to apply form " />
+                            <GlowingStarsTitle title="Grab Your Job" />
+                            <GlowingStarsDescription text="Firstly you have to apply form " />
                         </GlowingStarsBackgroundCard>
 
 

@@ -2,7 +2,7 @@
 
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 interface CustomSliderProps {
   url: string[];
@@ -10,28 +10,33 @@ interface CustomSliderProps {
   autoPlayInterval?: number;
 }
 
-const CustomSlider: React.FC<CustomSliderProps> = ({ maxSlides = 5, autoPlayInterval = 3000, url }) => {
+const CustomSlider: React.FC<CustomSliderProps> = ({
+  maxSlides = 5,
+  autoPlayInterval = 3000,
+  url,
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
-    startAutoPlay();
-    return () => stopAutoPlay();
-  }, [ ]);
+  const stopAutoPlay = useCallback(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  }, []);
 
-  const startAutoPlay = () => {
+  const startAutoPlay = useCallback(() => {
     stopAutoPlay();
     intervalRef.current = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % maxSlides);
     }, autoPlayInterval);
-  };
+  }, [autoPlayInterval, maxSlides, stopAutoPlay]);
 
-  const stopAutoPlay = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
-  };
+  useEffect(() => {
+    startAutoPlay();
+    return () => stopAutoPlay();
+  }, [startAutoPlay, stopAutoPlay]);
 
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev === 0 ? maxSlides - 1 : prev - 1));
@@ -74,9 +79,17 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ maxSlides = 5, autoPlayInte
         {url.map((imageUrl, index) => (
           <div
             key={index}
-            className={`w-full flex-shrink-0 h-96 flex items-center justify-center bg-gray-200 ${index === currentSlide ? 'opacity-100' : 'opacity-50'}`}
+            className={`w-full flex-shrink-0 h-96 flex items-center justify-center bg-gray-200 ${
+              index === currentSlide ? 'opacity-100' : 'opacity-50'
+            }`}
           >
-            <Image src={imageUrl} alt={`Slide ${index + 1}`} width={700} height={700} className={`${isHovered ? 'scale-105 blur-0' : 'blur-sm'}`}/>
+            <Image
+              src={imageUrl}
+              alt={`Slide ${index + 1}`}
+              width={700}
+              height={700}
+              className={`${isHovered ? 'scale-105 blur-0' : 'blur-sm'}`}
+            />
           </div>
         ))}
       </div>
@@ -94,4 +107,3 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ maxSlides = 5, autoPlayInte
 };
 
 export default CustomSlider;
-
