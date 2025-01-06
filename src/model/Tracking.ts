@@ -16,7 +16,7 @@ export interface Tracking {
   _id?: mongoose.Types.ObjectId;
   blogId: mongoose.Types.ObjectId;
   ip: string;
-  deviceName: string;
+  deviceModel: string;
   browser: string;
   os: string;
   userAgent?: string;
@@ -43,7 +43,7 @@ const TrackingSchema = new Schema<Tracking>(
   {
     blogId:  { type: Schema.Types.ObjectId, ref: "Blogs", required: true },
     ip: { type: String, required: true, index: true },
-    deviceName: { type: String, default: "Unknown Device", required: true },
+    deviceModel: { type: String, default: "Unknown Device", required: true },
     browser: { type: String, default: "Unknown Browser", required: true },
     os: { type: String, default: "Unknown OS", required: true },
     userAgent: { type: String },

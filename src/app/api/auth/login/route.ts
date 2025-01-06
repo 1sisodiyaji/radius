@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
       JWT_SECRET,
       { expiresIn: "1h" } 
     );
-    const { ip, deviceName, locationData } = await getLoginDetails(request);
+    const { ip, deviceModel, locationData } = await getLoginDetails(request);
 
     await User.findByIdAndUpdate(
       existingUser._id,
@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
         $inc: { loginCount: 1 },
         lastLogined: new Date(),
         lastLoginIp: ip,
-        lastLoginDevice: deviceName,
+        lastLoginDevice: deviceModel,
         lastLoginLocation: locationData.city || "Unknown Location",
       },
       { new: true }

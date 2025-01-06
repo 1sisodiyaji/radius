@@ -30,19 +30,21 @@ export async function GET(request: NextRequest,{params,
       return NextResponse.json({ error: "Blog not found" }, { status: 404 });
     }
 
-    const { ip, deviceName, locationData } = await getLoginDetails(request) as unknown as {
+    const { ip,userAgent,browser,os, deviceModel, locationData } = await getLoginDetails(request) as unknown as {
       ip: string;
-      deviceName: DeviceDetails;
+      userAgent: string;
+      browser: string;
+      os:string;
+      deviceModel: DeviceDetails;
       locationData: LocationData; 
     };
-
-    await Tracking.findOneAndUpdate(
-      { blogId: blog._id, ip, deviceName },
+    await Tracking.create(
+      { blogId: blog._id, ip, deviceModel },
       {
         $set: {
-          browser: deviceName.browser || "Unknown Browser",
-          os: deviceName.os || "Unknown OS",
-          userAgent: deviceName.userAgent || "Unknown UserAgent",
+          browser: browser || "Unknown Browser",
+          os: os || "Unknown OS",
+          userAgent: userAgent || "Unknown UserAgent",
           location: locationData || {
             city: "Unknown",
             country: "Unknown",

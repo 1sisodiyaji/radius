@@ -21,16 +21,19 @@ export async function getLoginDetails(request: NextRequest) {
     const userAgent = request.headers.get("user-agent") || "";
 
     const response = await fetch(`http://ip-api.com/json/${ip}`);
+    console.log("Location data" + response)
     const locationData = await response.json() as LocationData;
     const parser = new UAParser(userAgent);
     const deviceDetails = parser.getResult();
-    console.log(deviceDetails);
-    console.log("Location data" + locationData)
-    const deviceName = deviceDetails.device?.model || "Unknown Device";
-
+    const deviceModel = deviceDetails.device?.model || "Unknown Device";
+    const browser = deviceDetails.browser.name;
+    const os = deviceDetails.os.name;
     return {
       ip,
-      deviceName,
+      userAgent,
+      browser,
+      os,
+      deviceModel,
       locationData
     };
   } catch (error) {
