@@ -96,14 +96,15 @@ const Navbar = () => {
 
               </label>
             </button>
+            <Link href={'/support'}>
+              <button
+                type="button"
+                className="text-white dark:text-black bg-orange-400 hover:bg-orange-500  focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 text-center"
 
-            <button
-              type="button"
-              className="text-white dark:text-black bg-orange-400 hover:bg-orange-500  focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 text-center"
-            >
-              Request A Demo
-            </button>
-
+              >
+                Support
+              </button>
+            </Link>
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
@@ -132,7 +133,7 @@ const Navbar = () => {
           <div
             className={cn("inset-x-0 max-w-5xl mx-auto z-50")}
           >
-            <Menu setActive={setActive}> 
+            <Menu setActive={setActive}>
               <MenuItem setActive={setActive} active={active} item="why Radius">
                 <div className="  text-sm grid grid-cols-2 gap-10 p-4">
                   <ProductItem
@@ -174,7 +175,7 @@ const Navbar = () => {
                     href="/offering/support"
                     src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
                     description="Production ready Tailwind css components for your next project"
-                  /> 
+                  />
                 </div>
               </MenuItem>
               <MenuItem setActive={setActive} active={active} item="resources">
@@ -196,13 +197,13 @@ const Navbar = () => {
                     href="/resources/Features"
                     src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
                     description="Never write from scratch again. Go from idea to blog in minutes."
-                  /> 
-                   <ProductItem
+                  />
+                  <ProductItem
                     title="Carrer"
                     href="/resources/carrer"
                     src="https://res.cloudinary.com/dvgs9khxj/image/upload/v1735819635/carrer_yzeues.png"
                     description="Carrer Page Check out your dream job here"
-                  /> 
+                  />
                 </div>
               </MenuItem>
             </Menu>

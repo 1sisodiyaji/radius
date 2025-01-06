@@ -10,9 +10,10 @@ const Footer: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8 px-6">
 
                 <div>
-                    <h3 className="text-2xl font-bold">Logo</h3>
+                    <h3 className="text-2xl font-bold">Radius</h3>
                     <p className="mt-2 text-sm">
-                        Lorem ipsum, dollar, something will be here written.
+                    RADIUS is cloud based omnichannel interaction system
+                    that is powerful, intelligent, secure, and easy to use.
                     </p>
                     <button className="mt-4 px-4 py-2 bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 text-orange-600 font-medium rounded-md dark:hover:bg-gray-200">
                         Request A Demo
@@ -50,14 +51,14 @@ const Footer: React.FC = () => {
                 <div className="container mx-auto grid grid-cols-1 gap-6">
                     <div className="bg-orange-200 hover:bg-orange-400 dark:bg-gray-600 p-4 rounded-md">
                         <h5 className="font-semibold flex gap-2"><Phone size={18} /> Call Us Directly At</h5>
-                        <p className="mt-1">+91 6371790702</p>
+                        <p className="mt-1">+91 80691 30844</p>
                         <button className="w-full mt-4 px-4 py-2 bg-white text-orange-600 font-medium rounded-md hover:bg-gray-200">
                             Contact Us
                         </button>
                     </div>
                     <div className="bg-orange-200 hover:bg-orange-400 dark:bg-gray-600  p-4 rounded-md">
                         <h5 className="font-semibold flex gap-2"><Mail size={18} /> Chat With Our Team</h5>
-                        <p className="mt-1 font-medium">637golusingh@gmail.com</p>
+                        <p className="mt-1 font-medium">hello@radius-ois.ai</p>
                         <button className="w-full mt-4 px-4 py-2 bg-white text-orange-600 font-medium rounded-md hover:bg-gray-200">
                             Contact Us
                         </button>
@@ -66,7 +67,7 @@ const Footer: React.FC = () => {
 
             </div>
             <div className=" mt-8 flex flex-col md:flex-row items-center justify-between px-6">
-                <p>2024 © logo -</p>
+                <p>Copyright © 2024 RADIUS. All rights reserved.</p>
                 <div className="flex space-x-4 mt-4 md:mt-0">
                     <a href="#" className="text-white hover:text-gray-300"><Facebook size={20} /></a>
                     <a href="#" className="text-white hover:text-gray-300"><Instagram size={20} /></a>
