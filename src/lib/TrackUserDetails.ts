@@ -30,10 +30,7 @@ export async function getLoginDetails(request: NextRequest) {
     }
 
     const data: ResponseData = (await response.json()) as ResponseData;
-    if (data.status !== "success") {
-      throw new Error(`Location data fetch failed: ${data.status}`);
-    }
-
+   
     const locationData = data;
     const parser = new UAParser(userAgent);
     const deviceDetails = parser.getResult();

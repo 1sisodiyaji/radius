@@ -24,9 +24,8 @@ export async function GET(request: NextRequest,{params,
   try {
     await connectToDatabase();
     
-    const blog = await Blogs.findOne({ slug});
-
-    if (!blog._id) {
+    const blog = await Blogs.findOne({slug: slug});
+    if (!blog) {
       return NextResponse.json({ error: "Blog not found" }, { status: 404 });
     }
 
@@ -39,25 +38,21 @@ export async function GET(request: NextRequest,{params,
       locationData: LocationData; 
     };
 
-    await Tracking.create(
-      { blogId: blog._id, ip, deviceModel },
-      {
-        $set: {
-          browser: browser,
-          os: os,
-          userAgent: userAgent,
-          location: locationData,
-        },
-        $setOnInsert: {
-          blogId: blog._id,
-          timestamps: { firstHit: new Date(), lastHit: new Date() },
-        },
-        $inc: { hitCount: 1 },
-        $currentDate: { "timestamps.lastHit": true },
+    await Tracking.create({
+      blogId: blog._id, 
+      ip, 
+      deviceModel,
+      browser, 
+      os, 
+      userAgent, 
+      location: locationData, 
+      timing: { 
+        firstHit: new Date(), 
+        lastHit: new Date() 
       },
-      { upsert: true }
-    );
-
+      hitCount: 1
+    });
+    
     return NextResponse.json({ blog }, { status: 200 });
   } catch (error) {
     console.error("Error fetching blog by slug:", error);
