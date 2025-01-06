@@ -20,9 +20,10 @@ export async function getLoginDetails(request: NextRequest) {
     const ip = request.headers.get("x-forwarded-for") || "8.8.8.8";
     const userAgent = request.headers.get("user-agent") || "";
 
-    const response = await fetch(`http://ip-api.com/json/${ip}`);
-    console.log("Location data" + response)
+    const response = await fetch(`http://ip-api.com/json/${ip}`); 
     const locationData = await response.json() as LocationData;
+    console.log("Location data" + locationData);
+    console.log("Location" + response.json());
     const parser = new UAParser(userAgent);
     const deviceDetails = parser.getResult();
     const deviceModel = deviceDetails.device?.model || "Unknown Device";

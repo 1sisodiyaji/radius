@@ -36,7 +36,7 @@ const LocationSchema = new Schema<LocationData>({
   lat: { type: Number, default: 0 },
   lon: { type: Number, default: 0 },
   timezone: { type: String, default: "Unknown" },
-  query: { type: String, required: true }, 
+  query: { type: String , default: "Unknown"}, 
 });
 
 const TrackingSchema = new Schema<Tracking>(
@@ -49,8 +49,8 @@ const TrackingSchema = new Schema<Tracking>(
     userAgent: { type: String },
     location: { type: LocationSchema, default: {} },
     timing: {
-      firstHit: { type: Date, required: true },
-      lastHit: { type: Date, required: true },
+      firstHit: { type: Date, required: true ,default: Date.now },
+      lastHit: { type: Date, required: true ,default: Date.now },
     },
     hitCount: { type: Number, default: 0 },
   },

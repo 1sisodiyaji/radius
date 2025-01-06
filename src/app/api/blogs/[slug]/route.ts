@@ -66,7 +66,6 @@ export async function GET(request: NextRequest,{params,
       },
       { upsert: true }
     );
-    
 
     return NextResponse.json({ blog }, { status: 200 });
   } catch (error) {
