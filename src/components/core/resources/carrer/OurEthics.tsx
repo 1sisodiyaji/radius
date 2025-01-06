@@ -12,10 +12,10 @@ const OurEthics = () => {
                             <div className="w-1/2 my-12">
                                 <CustomSlider url={[
                                     "https://res.cloudinary.com/dvgs9khxj/image/upload/v1732024862/Group_1_gvodqh.png",
-                                    "https://res.cloudinary.com/dvgs9khxj/image/upload/v1735803921/Artboard-2_1_vj0yxp.webp",
-                                    "https://res.cloudinary.com/dvgs9khxj/image/upload/v1735803921/Artboard-3_1_vj0yxp.webp",
-                                    "https://res.cloudinary.com/dvgs9khxj/image/upload/v1735803921/Artboard-4_1_vj0yxp.webp",
-                                    "https://res.cloudinary.com/dvgs9khxj/image/upload/v1735803921/Artboard-5_1_vj0yxp.webp"
+                                    "https://res.cloudinary.com/dvgs9khxj/image/upload/v1732024862/Group_1_gvodqh.png",
+                                    "https://res.cloudinary.com/dvgs9khxj/image/upload/v1732024862/Group_1_gvodqh.png",
+                                    "https://res.cloudinary.com/dvgs9khxj/image/upload/v1732024862/Group_1_gvodqh.png",
+                                    "https://res.cloudinary.com/dvgs9khxj/image/upload/v1732024862/Group_1_gvodqh.png"
                                 ]}
                                     maxSlides={5}
                                     autoPlayInterval={3000}
