@@ -24,6 +24,8 @@ export async function getLoginDetails(request: NextRequest) {
     const locationData = await response.json() as LocationData;
     const parser = new UAParser(userAgent);
     const deviceDetails = parser.getResult();
+    console.log(deviceDetails);
+    console.log("Location data" + locationData)
     const deviceName = deviceDetails.device?.model || "Unknown Device";
 
     return {
