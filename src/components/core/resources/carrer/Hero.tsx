@@ -14,7 +14,7 @@ const CarrerHero = () => {
                     <GradualSpacing text="Help Business to Grow rapidaly without " className="text-5xl text-black dark:text-white" />
                     <GradualSpacing text="having an redudnacy of communication gap" className="text-5xl text-black dark:text-white" />
 
-                    <ShimmerButton shimmerColor="#f76716" children="See All Opening" className='text-white dark:text-white' />
+                    <ShimmerButton shimmerColor="#f76716" text="See All Opening" className='text-white dark:text-white' />
                 </div>
                 <WobbleCardDemo />
    </>

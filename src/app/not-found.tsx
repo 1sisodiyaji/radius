@@ -2,15 +2,19 @@
 
 import Link from 'next/link';
 import {  ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 const NotFoundPage: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center text-center py-12 px-6 bg-gray-50 dark:bg-gray-950 min-h-screen">
       {/* Image */}
       <div className="mb-6">
-        <img
+        <Image
           src="https://res.cloudinary.com/dvgs9khxj/image/upload/v1735881010/image_59-removebg-preview_vbfjql.png"
           alt="Page Not Found"
+          width={500}
+          height={500}
+          priority
           className="w-96 mx-auto"
         />
       </div>

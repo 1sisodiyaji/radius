@@ -10,7 +10,7 @@ export interface ShimmerButtonProps
   shimmerDuration?: string;
   background?: string;
   className?: string;
-  children?: React.ReactNode;
+  text?: string;
 }
 
 const ShimmerButton = React.forwardRef<HTMLButtonElement, ShimmerButtonProps>(
@@ -22,7 +22,7 @@ const ShimmerButton = React.forwardRef<HTMLButtonElement, ShimmerButtonProps>(
       borderRadius = "100px",
       background = "rgba(0, 0, 0, 1)",
       className,
-      children,
+      text,
       ...props
     },
     ref,
@@ -60,7 +60,7 @@ const ShimmerButton = React.forwardRef<HTMLButtonElement, ShimmerButtonProps>(
             <div className="absolute -inset-full w-auto rotate-0 animate-spin-around [background:conic-gradient(from_calc(270deg-(var(--spread)*0.5)),transparent_0,var(--shimmer-color)_var(--spread),transparent_var(--spread))] [translate:0_0]" />
           </div>
         </div>
-        {children}
+        {text}
 
         {/* Highlight */}
         <div

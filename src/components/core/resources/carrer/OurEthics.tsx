@@ -26,7 +26,7 @@ const OurEthics = () => {
                                 <p className='text-xl'>
                                     At RADIUS, we believe in the power of collaboration and innovation to create a more fulfilling and empowering work environment. Our ethics guide us to strive for excellence, fairness, and transparency in our workplace. We prioritize the well-being of our employees, and we are committed to building a culture of trust and respect. We are proud of our values and are committed to fostering a culture of collaboration and innovation.
                                 </p>
-                                <ShimmerButton shimmerColor="#f76716" children="Get in Touch" className='p-2 text-white dark:text-white' />
+                                <ShimmerButton shimmerColor="#f76716" text="Get in Touch" className='p-2 text-white dark:text-white' />
     
                             </div>
                         </div>

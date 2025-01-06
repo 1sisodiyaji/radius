@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/navbar-menu";
+import { Menu, MenuItem, ProductItem } from "../ui/navbar-menu";
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);

@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
         { status: 500 }
       );
     }
-    const { data , error: dbError } = await supabase
+    const {error: dbError } = await supabase
       .from("otp-session")
       .insert([
         {

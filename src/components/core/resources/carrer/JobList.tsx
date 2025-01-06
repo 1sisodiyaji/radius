@@ -44,7 +44,7 @@ const JobList = () => {
                                     <h3 className='text-lg'>{job.title}</h3>
                                     <h4 className='text-md'>{job.level}</h4>
                                     <h3 className='text-md'>{job.location}</h3>
-                                    <ShimmerButton shimmerColor="#f76716" children="Apply Now" className='p-2 text-white dark:text-white' />
+                                    <ShimmerButton shimmerColor="#f76716" text="Apply Now" className='p-2 text-white dark:text-white' />
                                 </div>
                             )
                         })}

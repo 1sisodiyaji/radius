@@ -1,7 +1,6 @@
 import AnimatedGradientText from '@/components/ui/animated-gradient-text'
 import { AnimatedTooltip } from '@/components/ui/animated-tooltip'
-import GradualSpacing from '@/components/ui/gradual-spacing'
-import HeroVideoDialog from '@/components/ui/hero-video-dialog'
+import GradualSpacing from '@/components/ui/gradual-spacing' 
 import MorphingText from '@/components/ui/morphing-text'
 import Safari from '@/components/ui/safari'
 import ShimmerButton from '@/components/ui/shimmer-button'
@@ -48,7 +47,7 @@ const Hero = () => {
                 <MorphingText texts={["easy-to-use", "secure", "efficient"]} className="text-xl text-orange-500" />
 
                 <div className="flex justify-center items-center space-x-6">
-                    <ShimmerButton shimmerColor="#f76716" children="Request a Customize Demo" className='text-white dark:text-white' />
+                    <ShimmerButton shimmerColor="#f76716" text="Request a Customize Demo" className='text-white dark:text-white' />
                     <div className="flex">
                         <AnimatedTooltip items={teamMembers} />
                     </div>

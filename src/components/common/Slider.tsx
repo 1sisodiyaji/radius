@@ -76,7 +76,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ maxSlides = 5, autoPlayInte
             key={index}
             className={`w-full flex-shrink-0 h-96 flex items-center justify-center bg-gray-200 ${index === currentSlide ? 'opacity-100' : 'opacity-50'}`}
           >
-            <Image src={imageUrl} alt={`Slide ${index + 1}`} width={700} height={700} />
+            <Image src={imageUrl} alt={`Slide ${index + 1}`} width={700} height={700} className={`${isHovered ? 'scale-105 blur-0' : 'blur-sm'}`}/>
           </div>
         ))}
       </div>
