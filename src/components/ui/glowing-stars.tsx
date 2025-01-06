@@ -36,28 +36,28 @@ export const GlowingStarsBackgroundCard = ({
 
 export const GlowingStarsDescription = ({
   className,
-  children,
+  text,
 }: {
   className?: string;
-  children?: React.ReactNode;
+  text?: string;
 }) => {
   return (
     <p className={cn("text-base text-white max-w-[16rem]", className)}>
-      {children}
+      {text}
     </p>
   );
 };
 
 export const GlowingStarsTitle = ({
   className,
-  children,
+  title,
 }: {
   className?: string;
-  children?: React.ReactNode;
+  title?: string;
 }) => {
   return (
     <h2 className={cn("font-bold text-2xl text-[#eaeaea]", className)}>
-      {children}
+      {title}
     </h2>
   );
 };

@@ -9,7 +9,7 @@ const CarrerHero = () => {
    <>
    
    <div className="py-24 mb-4 flex flex-col justify-center items-center gap-6">
-                    <AnimatedGradientText children={'🎉A small marketting line or a good starting line'} className={' text-center text-black dark:text-white'} />
+                    <AnimatedGradientText text={'🎉A small marketting line or a good starting line'} className={' text-center text-black dark:text-white'} />
 
                     <GradualSpacing text="Help Business to Grow rapidaly without " className="text-5xl text-black dark:text-white" />
                     <GradualSpacing text="having an redudnacy of communication gap" className="text-5xl text-black dark:text-white" />

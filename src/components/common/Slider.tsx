@@ -18,7 +18,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ maxSlides = 5, autoPlayInte
   useEffect(() => {
     startAutoPlay();
     return () => stopAutoPlay();
-  }, []);
+  }, [ ]);
 
   const startAutoPlay = () => {
     stopAutoPlay();

@@ -38,7 +38,7 @@ const Hero = () => {
 
             <Spotlight fill="#F76716" />
             <div className="pt-[10vh] mb-4">
-                <AnimatedGradientText children={'🎉A small marketting line or a good starting line'} className={' text-center text-black dark:text-white'} />
+                <AnimatedGradientText text={'🎉A small marketting line or a good starting line'} className={' text-center text-black dark:text-white'} />
 
             </div>
 
