@@ -69,10 +69,10 @@ const Footer: React.FC = () => {
             <div className=" mt-8 flex flex-col md:flex-row items-center justify-between px-6">
                 <p>Copyright © 2024 RADIUS. All rights reserved.</p>
                 <div className="flex space-x-4 mt-4 md:mt-0">
-                    <a href="#" className="text-white hover:text-gray-300"><Facebook size={20} /></a>
-                    <a href="#" className="text-white hover:text-gray-300"><Instagram size={20} /></a>
-                    <a href="#" className="text-white hover:text-gray-300"><Linkedin size={20} /></a>
-                    <a href="#" className="text-white hover:text-gray-300"> <Twitter size={20} /></a>
+                    <Link href="#" className="text-white hover:text-gray-300"><Facebook size={20} /></Link>
+                    <Link href="#" className="text-white hover:text-gray-300"><Instagram size={20} /></Link>
+                    <Link href="#" className="text-white hover:text-gray-300"><Linkedin size={20} /></Link>
+                    <Link href="#" className="text-white hover:text-gray-300"> <Twitter size={20} /></Link>
                 </div>
                 <div className="flex space-x-4 mt-4 md:mt-0">
                     <Link href="/terms-of-use" className="hover:underline hover:text-orange-400">Terms Of Us</Link>

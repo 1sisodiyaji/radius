@@ -3,9 +3,13 @@
 import Link from 'next/link';
 import {  ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Navbar from '@/components/common/Navbar';
+import Footer from '@/components/common/Footer';
 
 const NotFoundPage: React.FC = () => {
   return (
+    <>
+    <Navbar/>
     <div className="flex flex-col items-center justify-center text-center py-12 px-6 bg-gray-50 dark:bg-gray-950 min-h-screen">
       {/* Image */}
       <div className="mb-6">
@@ -72,6 +76,8 @@ const NotFoundPage: React.FC = () => {
         </div>
       </div>
       </div>
+      <Footer/>
+      </>
   );
 };
 

@@ -13,6 +13,7 @@ export interface IUser {
   lastLoginIp: string;
   lastLoginDevice: string;
   lastLoginLocation: string;
+  otp:string;
 }
 
 const userSchema = new Schema<IUser>(
@@ -25,6 +26,7 @@ const userSchema = new Schema<IUser>(
     lastLoginIp: { type: String },
     lastLoginDevice: { type: String },
     lastLoginLocation: { type: String },
+    otp:{ type: String},
   },
   { timestamps: true }
 );

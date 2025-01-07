@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/common/Navbar"; 
-import Footer from "@/components/common/Footer";
+import "./globals.css"; 
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "600", "700"], // Choose weights you need
-  variable: "--font-poppins", // Custom CSS variable for font
+  weight: ["400", "600", "700"], 
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +24,8 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased bg-gray-50 dark:bg-gray-950`}
       > 
-        <Navbar/>
-        <div className="py-20">{children}</div>
-        <Footer/>
+      <Toaster/>
+      {children}
       </body>
     </html>
   );

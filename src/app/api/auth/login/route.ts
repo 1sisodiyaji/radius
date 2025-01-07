@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
 
     if (!email || !password) {
       return NextResponse.json(
-        { error: "Email and password are required" },
+        { message: "Email and password are required" },
         { status: 400 }
       );
     }
@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
     const existingUser = await User.findOne({ email });
     if (!existingUser) {
       return NextResponse.json(
-        { error: "User not found. Please register." },
+        { message: "User not found. Please register." },
         { status: 400 }
       );
     }
@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
     const isPasswordValid = await bcrypt.compare(password, existingUser.password);
     if (!isPasswordValid) {
       return NextResponse.json(
-        { error: "Invalid email or password" },
+        { message: "Invalid email or password" },
         { status: 401 }
       );
     }
@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
 
 
     const response = NextResponse.json(
-      { message: "Login successful", userId: existingUser._id },
+      { message: "Login successful", userId: existingUser._id ,token},
       { status: 200 }
     );
     response.cookies.set("admin-token", token, {
