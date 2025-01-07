@@ -6,6 +6,7 @@ import Safari from '@/components/ui/safari'
 import ShimmerButton from '@/components/ui/shimmer-button'
 import { Spotlight } from '@/components/ui/Spotlight'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 
@@ -47,7 +48,7 @@ const Hero = () => {
                 <MorphingText texts={["easy-to-use", "secure", "efficient"]} className="text-xl text-orange-500" />
 
                 <div className="flex justify-center items-center space-x-6">
-                    <ShimmerButton shimmerColor="#f76716" text="Request a Customize Demo" className='text-white dark:text-white' />
+                  <Link href={'/meeting'}>  <ShimmerButton shimmerColor="#f76716" text="Request a Customize Demo" className='text-white dark:text-white' /> </Link>
                     <div className="flex">
                         <AnimatedTooltip items={teamMembers} />
                     </div>
@@ -55,7 +56,7 @@ const Hero = () => {
                 </div>
 
             </div>
-            <Safari url="https://radius-ois.ai" imageSrc="https://res.cloudinary.com/dvgs9khxj/image/upload/v1735803921/Artboard-1_1_vj0yxp.webp" className={'mx-auto rounded-xl shadow-orange-glow z-[25]'} />
+            <Safari url="https://radius-ois.ai" imageSrc="https://res.cloudinary.com/dvgs9khxj/image/upload/v1735803921/Artboard-1_1_vj0yxp.webp" className={'mx-auto rounded-xl z-[25]'} />
 
             <div className="my-12 relative overflow-hidden w-full ">
                 <div className="flex justify-evenly items-center animate-scroll space-x-6">

@@ -1,5 +1,5 @@
 "use client";
-import { Home, MenuIcon,Moon,NewspaperIcon,SidebarCloseIcon,SquareArrowOutDownLeft,Sun} from "lucide-react";
+import { Building2, Home, Library, MenuIcon,MessageCircle,Moon,NewspaperIcon,Settings,SidebarCloseIcon,Sun} from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Blogs from "./Blogs/Blogs";
@@ -63,10 +63,10 @@ const AdminDashboard = () => {
 
   return (
     <>
-      <nav className="px-4 py-2 fixed w-full top-0 z-50">
+      <nav className="px-4 py-2 fixed w-full top-0 z-50 bg-white dark:bg-gray-900">
         <div className="flex justify-between items-center">
           <div className="flex gap-2 items-center">
-            <button onClick={toggleSidebar} className="text-gray-500 dark:text-gray-400">
+            <button onClick={toggleSidebar} className="text-gray-500 dark:text-gray-400 md:hidden ">
               {isSidebarOpen ? <SidebarCloseIcon /> : <MenuIcon />}
             </button>
             <Link href="/" className="flex items-center">
@@ -99,7 +99,7 @@ const AdminDashboard = () => {
 
       <aside
         className={`fixed top-0 left-0 w-64 h-screen pt-14 transition-transform duration-300 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-          } bg-white border-r dark:bg-gray-900`}
+          } bg-white shadow-sm dark:bg-gray-900`}
       >
         <div className="overflow-y-auto py-5 px-3 h-full">
           <ul className="space-y-2">
@@ -120,15 +120,36 @@ const AdminDashboard = () => {
             <li>
               <SidebarButton
                 label="Case Study"
-                icon={<SquareArrowOutDownLeft />}
+                icon={<Library />}
                 onClick={() => setActiveSection("Case Study")}
+              />
+            </li>
+            <li>
+              <SidebarButton
+                label="Companies"
+                icon={<Building2 />}
+                onClick={() => setActiveSection("Companies")}
+              />
+            </li>
+            <li>
+              <SidebarButton
+                label="Messages"
+                icon={<MessageCircle />}
+                onClick={() => setActiveSection("Messages")}
+              />
+            </li>
+            <li>
+              <SidebarButton
+                label="Setting"
+                icon={<Settings />}
+                onClick={() => setActiveSection("Setting")}
               />
             </li>
           </ul>
         </div>
       </aside>
 
-      <main className="md:p-4 p-1 md:ml-64 h-auto pt-20">
+      <main className="md:p-4 p-1 md:ml-64 h-auto mt-12">
         {renderContent()}
       </main>
     </>
