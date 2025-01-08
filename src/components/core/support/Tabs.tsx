@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Copy, MailIcon, MessageCircleIcon, PhoneCall, VideoIcon } from "lucide-react";
+import toast from "react-hot-toast";
 
 interface Tab {
   label: string;
@@ -43,6 +44,7 @@ const Tabs: React.FC = () => {
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text);
     setCopied(true);
+    toast.success("Copied !!");
     setTimeout(() => setCopied(false), 1500);
   };
 
@@ -55,7 +57,7 @@ const Tabs: React.FC = () => {
             onClick={() => handleCopy(tab.content)}
             className="ml-4  text-black dark:text-white px-3 py-1 "
           >
-            {copied ? "Copied!" : <Copy/>}
+            {copied ? "Copied!" : <Copy />}
           </button>
         </div>
       );
@@ -109,18 +111,17 @@ const Tabs: React.FC = () => {
   };
 
   return (
-    <div className="md:flex md:max-w-7xl mx-auto">
-      {/* Tab Buttons */}
+    <div className="md:flex items-center md:max-w-7xl mx-auto">
+
       <ul className="flex-column space-y space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:me-4 mb-4 md:mb-0">
         {tabs.map((tab) => (
           <li key={tab.label}>
             <button
               onClick={() => setActiveTab(tab.label)}
-              className={`inline-flex items-center px-4 py-3 rounded-lg min-w-72 ${
-                activeTab === tab.label
+              className={`inline-flex items-center px-4 py-3 rounded-lg min-w-72 ${activeTab === tab.label
                   ? "text-white bg-orange-500 dark:bg-orange-600"
                   : "hover:text-gray-900 bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
-              }`}
+                }`}
               aria-current={activeTab === tab.label ? "page" : undefined}
             >
               <span className="me-2">{tab.icon}</span>
@@ -130,8 +131,7 @@ const Tabs: React.FC = () => {
         ))}
       </ul>
 
-      {/* Tab Content */}
-      <div className="p-6 bg-gray-200 text-medium text-gray-500 dark:text-gray-400 dark:bg-gray-800 rounded-lg w-[40vw]">
+      <div className="p-6 bg-gray-200 text-medium text-gray-500 dark:text-gray-400 dark:bg-gray-800 rounded-lg w-[40vw] md:min-h-96">
         <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
           {activeTab}
         </h3>

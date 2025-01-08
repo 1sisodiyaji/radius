@@ -19,6 +19,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "radius-ois.ai",
       }, 
+      {
+        protocol: "https",
+        hostname: "flowbite.s3.amazonaws.com",
+      }, 
     ],
   },
 };

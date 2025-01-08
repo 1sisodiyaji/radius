@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"; 
 const {
 	default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -17,6 +17,10 @@ export default {
     		colors: {
     			background: 'hsl(var(--background))',
     			foreground: 'hsl(var(--foreground))',
+				darkText: '#f5f5f5',
+				lightText : '#2b2b2b',
+				bgLight : '#f5f5f5',
+				bgDark: '#1F2937',
     			card: {
     				DEFAULT: 'hsl(var(--card))',
     				foreground: 'hsl(var(--card-foreground))'
@@ -125,7 +129,11 @@ export default {
 					'0%': { transform: 'translateX(0)' },
 					'100%': { transform: 'translateX(-100%)' },
 				  },
-    		}
+    		}, 
+			backgroundImage: {
+				'hero-pattern': "url('/img/hero-pattern.svg')",
+				'footer-texture': "url('/img/footer-texture.png')",
+			}
     	}
     },
 	plugins: [addVariablesForColors, require("tailwindcss-animate")],
