@@ -79,16 +79,16 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
         {url.map((imageUrl, index) => (
           <div
             key={index}
-            className={`w-full flex-shrink-0 h-96 flex items-center justify-center bg-gray-200 ${
+            className={`w-full flex-shrink-0  flex items-center justify-center  ${
               index === currentSlide ? 'opacity-100' : 'opacity-50'
             }`}
           >
             <Image
               src={imageUrl}
               alt={`Slide ${index + 1}`}
-              width={700}
-              height={700}
-              className={`${isHovered ? 'scale-105 blur-0' : 'blur-sm'}`}
+              width={1000}
+              height={1000}
+              className={`${isHovered ? 'scale-105' : ''} `}
             />
           </div>
         ))}

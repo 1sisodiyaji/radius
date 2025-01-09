@@ -11,7 +11,7 @@ const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [active, setActive] = useState<string | null>(null);
-
+  const [scrollProgress, setScrollProgress] = useState(0);
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
@@ -39,6 +39,11 @@ const Navbar = () => {
       } else {
         setIsScrolled(false);
       }
+
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const currentScroll = window.scrollY;
+      const progress = (currentScroll / totalHeight) * 100;
+      setScrollProgress(progress);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -86,14 +91,14 @@ const Navbar = () => {
               title="Toggle Dark Mode"
               aria-label="Toggle Dark Mode"
             >
-              <label className="inline-flex items-center cursor-pointer">
+              <label className="inline-flex items-center justify-center cursor-pointer">
                 <input
                   type="checkbox"
                   checked={isDarkMode}
                   onChange={toggleDarkMode}
                   className="sr-only peer"
                 />
-                  {isDarkMode ? <Sun/> : <Moon/>}
+                {isDarkMode ? <Sun /> : <Moon />}
               </label>
             </button>
             <Link href={'/support'}>
@@ -211,6 +216,7 @@ const Navbar = () => {
 
 
         </div>
+        <div className="absolute bottom-0 left-0 h-[1px] bg-orange-500" style={{  width: `${scrollProgress}%`, transition: "width 0.3s ease-linear"}} ></div>
       </nav>
     </>
   );

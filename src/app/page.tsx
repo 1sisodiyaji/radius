@@ -1,11 +1,14 @@
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import { WobbleCardDemo } from "@/components/common/WoobleCard";
+import ChaeckRadiusInAction from "@/components/core/home/ChaeckRadiusInAction";
 import Device from "@/components/core/home/Device";
 import Faq from "@/components/core/home/Faq";
+import Features from "@/components/core/home/Features";
 import Hero from "@/components/core/home/Hero";
 import Marketting from "@/components/core/home/Marketting";
 import Testimonial from "@/components/core/home/Testimonial";
+import WhyRadius from "@/components/core/home/WhyRadius";
 
 export default function Home() {
   return (
@@ -16,6 +19,9 @@ export default function Home() {
         <WobbleCardDemo />
         <Device />
         <Marketting />
+        <WhyRadius/>
+        <ChaeckRadiusInAction/>
+        <Features/>
         <Testimonial />
         <Faq />
       </div>

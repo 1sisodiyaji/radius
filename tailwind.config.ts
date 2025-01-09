@@ -129,11 +129,7 @@ export default {
 					'0%': { transform: 'translateX(0)' },
 					'100%': { transform: 'translateX(-100%)' },
 				  },
-    		}, 
-			backgroundImage: {
-				'hero-pattern': "url('/img/hero-pattern.svg')",
-				'footer-texture': "url('/img/footer-texture.png')",
-			}
+    		},  
     	}
     },
 	plugins: [addVariablesForColors, require("tailwindcss-animate")],

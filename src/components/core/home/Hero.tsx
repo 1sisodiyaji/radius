@@ -1,9 +1,9 @@
-import AnimatedGradientText from '@/components/ui/animated-gradient-text' 
-import GradualSpacing from '@/components/ui/gradual-spacing' 
+import AnimatedGradientText from '@/components/ui/animated-gradient-text'
+import GradualSpacing from '@/components/ui/gradual-spacing'
 import ShimmerButton from '@/components/ui/shimmer-button'
 import { Spotlight } from '@/components/ui/Spotlight'
 import WordRotate from '@/components/ui/word-rotate'
-import {  LucideVideo } from 'lucide-react'
+import { LucideVideo } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -13,21 +13,15 @@ const Hero = () => {
         <>
             <div className='space-y-12'>
                 <Spotlight fill="#F76716" />
-                <div className="pt-[10vh] mb-4">
-                    <AnimatedGradientText text={'🎉A small marketting line or a good starting line'} className={' text-center text-black dark:text-white'} />
-
-                </div>
+                <div className="pt-[10vh] mb-4"><AnimatedGradientText text={'🎉A small marketting line or a good starting line'} className={' text-center text-black dark:text-white'} /></div>
 
                 <div className="flex flex-col justify-center items-center mb-12 space-y-6">
                     <GradualSpacing text="An Omnichannel Interaction System that is" className="text-5xl text-black dark:text-white" />
+                    <WordRotate words={["easy-to-use", "secure", "efficient"]} className="text-5xl text-orange-500 bg-orange-100 dark:bg-orange-200  shadow-inner px-6 py-3 rounded-lg" />
 
-                    <WordRotate words={["easy-to-use", "secure", "efficient"]} className="text-5xl text-orange-500" />
                     <div className="flex justify-center items-center space-x-6">
                         <Link href={'/meeting'}>  <ShimmerButton shimmerColor="#f76716" text="Request a Customize Demo" className='text-white dark:text-white' /> </Link>
-                        <div className="flex">
-                            <Link href={'/meeting'}>  <button className='px-6 rounded-md py-3 border bg-bgLight dark:bg-bgDark border-gray-300  flex items-center gap-2'><LucideVideo />   Watch Video</button></Link>
-                        </div>
-
+                        <Link href={'/'}>  <button className='px-6 rounded-md py-3 border bg-bgLight dark:bg-bgDark border-gray-300 dark:border-gray-700  flex items-center gap-2'><LucideVideo />   Watch Video</button></Link>
                     </div>
 
                 </div>
