@@ -62,10 +62,6 @@ const Navbar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const closeSidebar = () => {
-    setIsSidebarOpen(false);
-  };
-
   return (
     <>
       <nav className={`bg-gray-50 dark:bg-gray-950 fixed w-full z-20 top-0 start-0 ${isScrolled ? "shadow-sm" : "shadow-0"}`}>
