@@ -45,7 +45,7 @@ const Features = () => {
         <DotPattern className="z-0 opacity-80" />
         <div className='z-10 relative'>
           <h1 className='text-2xl font-semibold text-center'>Designed for both Agents and Customer</h1>
-          <div className="flex justify-center items-center space-x-4 mb-6">
+          <div className="flex md:flex-row flex-col justify-center items-center space-x-4 mb-6">
 
             {cards.map((card) => (
               <div
@@ -59,7 +59,7 @@ const Features = () => {
               </div>
             ))}
           </div>
-          <div className="flex justify-between items-center">
+          <div className="flex md:flex-row flex-col justify-between items-center">
             {cards2.map((card) => (
               <div key={card.id} className="block max-w-sm min-h-80 p-6 rounded-xl cursor-grabbing">
 

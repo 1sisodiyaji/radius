@@ -38,10 +38,10 @@ const Device = () => {
   return (
     <> 
       <div className='text-center'>
-        <h1 className="uppercase text-xl text-orange-500">Stastics</h1>
-        <h2 className="text-4xl capitalize font-semibold">Some marketting line will be there</h2>
+        <h1 className="uppercase text-xl text-orange-500 mb-4">Stastics</h1>
+        <h2 className="md:text-4xl capitalize font-semibold mb-4">Some marketting line will be there</h2>
 
-        <div className="flex justify-between items-center">
+        <div className="flex md:flex-row flex-col justify-between items-center">
 
           <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px]">
             <div className="h-[32px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
@@ -55,7 +55,7 @@ const Device = () => {
             </div>
           </div>
 
-          <div className="max-w-5xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+          <div className="max-w-5xl mx-auto md:p-6 p-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
             {stats.map((stat) => (
               <div
                 key={stat.id}

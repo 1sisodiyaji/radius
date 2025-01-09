@@ -11,17 +11,18 @@ import React from 'react'
 const Hero = () => {
     return (
         <>
+        <Spotlight fill="#F76716" />
             <div className='space-y-12'>
-                <Spotlight fill="#F76716" />
+                
                 <div className="pt-[10vh] mb-4"><AnimatedGradientText text={'🎉A small marketting line or a good starting line'} className={' text-center text-black dark:text-white'} /></div>
 
                 <div className="flex flex-col justify-center items-center mb-12 space-y-6">
-                    <GradualSpacing text="An Omnichannel Interaction System that is" className="text-5xl text-black dark:text-white" />
-                    <WordRotate words={["easy-to-use", "secure", "efficient"]} className="text-5xl text-orange-500 bg-orange-100 dark:bg-orange-200  shadow-inner px-6 py-3 rounded-lg" />
+                    <GradualSpacing text="An Omnichannel Interaction System that is" className="md:text-5xl text-black dark:text-white" />
+                    <WordRotate words={["easy-to-use", "secure", "efficient"]} className="md:text-5xl text-orange-500 bg-orange-100 dark:bg-orange-200  shadow-inner px-6 py-3 rounded-lg" />
 
                     <div className="flex justify-center items-center space-x-6">
-                        <Link href={'/meeting'}>  <ShimmerButton shimmerColor="#f76716" text="Request a Customize Demo" className='text-white dark:text-white' /> </Link>
-                        <Link href={'/'}>  <button className='px-6 rounded-md py-3 border bg-bgLight dark:bg-bgDark border-gray-300 dark:border-gray-700  flex items-center gap-2'><LucideVideo />   Watch Video</button></Link>
+                        <Link href={'/meeting'}>  <ShimmerButton shimmerColor="#f76716" text="Request a Customize Demo" className='text-white dark:text-white  text-[10px] md:text-sm' /> </Link>
+                        <Link href={'/'}>  <button className='md:px-6 rounded-md md:py-3 px-4 py-2 border bg-bgLight dark:bg-bgDark border-gray-300 dark:border-gray-700  flex items-center gap-2 text-[10px] md:text-sm'><LucideVideo />   Watch Video</button></Link>
                     </div>
 
                 </div>

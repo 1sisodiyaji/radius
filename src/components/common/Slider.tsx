@@ -62,7 +62,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
 
   return (
     <div
-      className="relative w-full max-w-5xl min-h-96 mx-auto overflow-hidden border border-gray-300 rounded-lg shadow-lg"
+      className="relative w-full max-w-5xl md:min-h-96  mx-auto overflow-hidden border border-gray-300 rounded-lg shadow-lg"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

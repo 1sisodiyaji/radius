@@ -52,7 +52,7 @@ const Faq = () => {
         <div>
             <div className="space-y-6">
                 <h1 className="uppercase text-xl text-orange-500 text-center ">FAQ's</h1>  
-                <div className="w-full max-w-7xl mx-auto  p-6 space-y-6">
+                <div className="w-full max-w-7xl mx-auto  md:p-6 space-y-6">
                     {faqs.map((faq, index) => (
                         <InViewMotion key={faq.id}>
                             <motion.div

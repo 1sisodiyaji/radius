@@ -4,14 +4,14 @@ import React from "react";
 
 const Testimonials = () => {
     return (
-        <div className="bg-bgLight dark:bg-bgDark p-8 rounded-3xl max-w-6xl mx-auto">
+        <div className="bg-bgLight dark:bg-bgDark md:p-8 py-4 md:py-0 rounded-3xl max-w-6xl mx-auto">
 
             <div className="text-center mb-8">
                 <h1 className="uppercase text-xl text-orange-500 text-center ">Testimonial</h1>
             </div>
 
-            <div className="grid grid-cols-12 gap-8 items-center">
-                <div  className="col-span-12 md:col-span-5 relative bg-cover  bg-center bg-no-repeat bg-[url('https://res.cloudinary.com/dbqq41bpc/image/upload/v1736402816/Rectangle_39511_cpwjir.png')] rounded-2xl  h-full">
+            <div className="grid grid-cols-12 md:gap-8 gap-2 items-center">
+                <div  className="col-span-12 md:col-span-5 md:block hidden relative bg-cover  bg-center bg-no-repeat bg-[url('https://res.cloudinary.com/dbqq41bpc/image/upload/v1736402816/Rectangle_39511_cpwjir.png')] rounded-2xl  h-full">
                     <div className="absolute top-0 left-0">
                         <h1 className="text-md font-semibold text-gray-800  textwrap max-w-48 px-2 py-1">
                             Hear From Our Satisfied Clients Have To Say <span>❤️</span>
@@ -142,7 +142,7 @@ const Testimonials = () => {
                 </div>
             </div>
 
-            <div className=" flex justify-between items-center bg-orange-200 dark:bg-orange-400 rounded-xl mt-8 px-6 py-3">
+            <div className=" flex justify-between items-center bg-orange-200 dark:bg-orange-400 rounded-xl mt-8 md:px-6 px-3 md:py-3 py-1 m-1">
                 <h2 className="text-xl font-semibold ">
                     Are You The Next One?
                 </h2>

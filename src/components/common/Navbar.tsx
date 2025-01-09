@@ -12,6 +12,8 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [active, setActive] = useState<string | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
@@ -54,6 +56,14 @@ const Navbar = () => {
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
+  };
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
   };
 
   return (
@@ -101,25 +111,26 @@ const Navbar = () => {
                 {isDarkMode ? <Sun /> : <Moon />}
               </label>
             </button>
+
             <Link href={'/support'}>
               <button
                 type="button"
-                className="text-white dark:text-black bg-orange-400 hover:bg-orange-500  focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 text-center"
+                className="text-white dark:text-black bg-orange-400 hover:bg-orange-500  focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 text-center md:block hidden"
 
               >
                 Support
               </button>
             </Link>
+
             <button
-              data-collapse-toggle="navbar-sticky"
               type="button"
+              onClick={toggleSidebar}
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="navbar-sticky"
-              aria-expanded="false"
+              aria-expanded={isSidebarOpen ? "true" : "false"}
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                className="w-5 h-5"
+                className={`w-5 h-5 ${isSidebarOpen ? "hidden" : "block"}`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 17 14"
@@ -132,12 +143,88 @@ const Navbar = () => {
                   d="M1 1h15M1 7h15M1 13h15"
                 />
               </svg>
+              <svg
+                className={`w-5 h-5 ${isSidebarOpen ? "block" : "hidden"}`}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
             </button>
+
           </div>
 
-          <div
-            className={cn("inset-x-0 max-w-5xl mx-auto z-50")}
-          >
+          <div   className={`fixed top-0 left-0 h-full bg-white dark:bg-gray-950 transition-transform transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:hidden w-64 z-50`} > 
+
+            <div className="flex flex-col space-y-6 p-4"> 
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Why Radius</h3>
+                <ul className="space-y-2 mt-2">
+                  <li>
+                    <Link href="/why-radius/overview" className="block text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Overview</Link>
+                  </li>
+                  <li>
+                    <Link href="/why-radius/capabilities" className="block text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Capabilities</Link>
+                  </li>
+                  <li>
+                    <Link href="/why-radius/industry" className="block text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Industry</Link>
+                  </li>
+                  <li>
+                    <Link href="/why-radius/technology" className="block text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Technology</Link>
+                  </li>
+                </ul>
+              </div>
+ 
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Offerings</h3>
+                <ul className="space-y-2 mt-2">
+                  <li>
+                    <Link href="/offering/products" className="block text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Products</Link>
+                  </li>
+                  <li>
+                    <Link href="/offering/support" className="block text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Support</Link>
+                  </li>
+                </ul>
+              </div>
+ 
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Resources</h3>
+                <ul className="space-y-2 mt-2">
+                  <li>
+                    <Link href="/resources/blogs" className="block text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Blogs</Link>
+                  </li>
+                  <li>
+                    <Link href="/resources/career" className="block text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Career</Link>
+                  </li>
+                  <li>
+                    <Link href="/resources/Features" className="block text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Features</Link>
+                  </li>
+                  <li>
+                    <Link href="/resources/customer-stories" className="block text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Customer Stories</Link>
+                  </li>
+                </ul>
+              </div>
+ 
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Support</h3>
+                <ul className="space-y-2 mt-2">
+                  <li>
+                    <Link href="/support" className="block text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Support</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <div className={cn("inset-x-0 max-w-5xl mx-auto z-50 md:block hidden")} >
             <Menu setActive={setActive}>
               <MenuItem setActive={setActive} active={active} item="why Radius">
                 <div className="  text-sm grid grid-cols-2 gap-10 p-4">
@@ -216,7 +303,7 @@ const Navbar = () => {
 
 
         </div>
-        <div className="absolute bottom-0 left-0 h-[1px] bg-orange-500" style={{  width: `${scrollProgress}%`, transition: "width 0.3s ease-linear"}} ></div>
+        <div className="absolute bottom-0 left-0 h-[1px] bg-orange-500" style={{ width: `${scrollProgress}%`, transition: "width 0.3s ease-linear" }} ></div>
       </nav>
     </>
   );

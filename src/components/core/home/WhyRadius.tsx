@@ -10,13 +10,13 @@ const WhyRadius: React.FC = () => {
             <div>
                 <div className="text-center mb-8">
                     <h1 className="uppercase text-xl text-orange-500 text-center ">WHY RADIUS ?</h1>
-                    <h2 className='text-4xl capitalize font-semibold'>The powerful way to handle end-to-end customer journeys</h2>
+                    <h2 className='md:text-4xl capitalize font-semibold'>The powerful way to handle end-to-end customer journeys</h2>
                 </div>
 
-                <div className="flex items-stretch justify-between gap-2">
-                    <div className="w-2/3 flex flex-col justify-between items-stretch gap-2">
+                <div className="flex md:flex-row flex-col items-stretch justify-between gap-2">
+                    <div className="md:w-2/3 w-full flex flex-col justify-between items-stretch gap-2">
 
-                        <div className="flex justify-between items-stretch gap-2">
+                        <div className="flex md:flex-row flex-col justify-between items-stretch gap-2">
                             <div className="min-h-72 border p-4 rounded-md relative  group transition-transform transform hover:shadow-[0_0_1px_1px_rgba(255,165,0,0.5)] hover:cursor-grab bg-bgLight dark:bg-bgDark">
                                 <h2 className="text-xl font-semibold mb-4">Scalable & Future Ready</h2>
                                 <p className="text-gray-400 mb-8">Built on microservices, it scales to handle tenants and their operational loads seamlessly.</p>
@@ -30,11 +30,11 @@ const WhyRadius: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="relative min-h-40 flex justify-between items-center p-3">
+                        <div className="relative min-h-40 flex md:flex-row flex-col justify-between items-center p-3">
                             <DotPattern className='z-0' />
-                            <div className="relative z-10 flex justify-between w-full items-center"> 
-                                    <h1 className="font-semibold text-xl text-center">Seamless Integrations for a seamless experience!</h1>
-                                    <Link href={'/meeting'}>  <ShimmerButton shimmerColor="#f76716" text="Request a Customize Demo" className='text-white dark:text-white' /> </Link>
+                            <div className="relative z-10 flex  flex-col  justify-between w-full items-center">
+                                <h1 className="font-semibold text-xl text-center">Seamless Integrations for a seamless experience!</h1>
+                                <Link href={'/meeting'}>  <ShimmerButton shimmerColor="#f76716" text="Request a Customize Demo" className='text-white dark:text-white text-[10px] md:text-sm mt-4' /> </Link>
                             </div>
                         </div>
 
@@ -59,7 +59,7 @@ const WhyRadius: React.FC = () => {
                         </div>
 
                     </div>
-                    <div className="w-1/3 flex flex-col justify-between items-stretch gap-2">
+                    <div className="md:w-1/3 w-full flex flex-col justify-between items-stretch gap-2">
                         <div className="min-h-72 h-full border p-4 rounded-md relative group transition-transform transform hover:shadow-[0_0_1px_1px_rgba(255,165,0,0.5)] hover:cursor-grab bg-bgLight dark:bg-bgDark">
                             <h2 className="text-xl font-semibold mb-4">Data Isolation</h2>
                             <p className="text-gray-400 mb-4">Ensure tenant data and operational isolation while adhering to industry security standards.</p>
