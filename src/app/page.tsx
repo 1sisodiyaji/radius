@@ -1,12 +1,11 @@
 import Footer from "@/components/common/Footer";
-import Navbar from "@/components/common/Navbar";
-import { WobbleCardDemo } from "@/components/common/WoobleCard";
+import Navbar from "@/components/common/Navbar"; 
 import ChaeckRadiusInAction from "@/components/core/home/ChaeckRadiusInAction";
 import Device from "@/components/core/home/Device";
 import Faq from "@/components/core/home/Faq";
 import Features from "@/components/core/home/Features";
-import Hero from "@/components/core/home/Hero";
-import Marketting from "@/components/core/home/Marketting";
+import Hero from "@/components/core/home/Hero"; 
+import OurProducts from "@/components/core/home/OurProducts";
 import Testimonial from "@/components/core/home/Testimonial";
 import WhyRadius from "@/components/core/home/WhyRadius";
 
@@ -15,10 +14,9 @@ export default function Home() {
     <>
       <Navbar />
       <div className=" max-w-7xl mx-auto space-y-20">
-        <Hero />
-        <WobbleCardDemo />
-        <Device />
-        <Marketting />
+        <Hero /> 
+        <OurProducts/>
+        <Device /> 
         <WhyRadius/>
         <ChaeckRadiusInAction/>
         <Features/>

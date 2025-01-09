@@ -17,20 +17,20 @@ const WhyRadius: React.FC = () => {
                     <div className="w-2/3 flex flex-col justify-between items-stretch gap-2">
 
                         <div className="flex justify-between items-stretch gap-2">
-                            <div className="min-h-96 border p-4 rounded-md relative  group transition-transform transform hover:shadow-[0_0_1px_1px_rgba(255,165,0,0.5)] hover:cursor-grab bg-bgLight dark:bg-bgDark">
+                            <div className="min-h-72 border p-4 rounded-md relative  group transition-transform transform hover:shadow-[0_0_1px_1px_rgba(255,165,0,0.5)] hover:cursor-grab bg-bgLight dark:bg-bgDark">
                                 <h2 className="text-xl font-semibold mb-4">Scalable & Future Ready</h2>
                                 <p className="text-gray-400 mb-8">Built on microservices, it scales to handle tenants and their operational loads seamlessly.</p>
-                                <Image src={'https://radius-ois.ai/wp-content/uploads/2023/10/stor3.png'} width={1000} height={1000} alt="Integration Capabilities" className="w-72 h-48 absolute right-0 bottom-0 transition-transform transform group-hover:scale-95" />
+                                <Image src={'https://radius-ois.ai/wp-content/uploads/2023/10/stor3.png'} width={1000} height={1000} alt="Integration Capabilities" className="w-72 h-40 absolute right-0 bottom-0 transition-transform transform group-hover:scale-95" />
                             </div>
 
-                            <div className="min-h-96 border p-4 rounded-md relative group transition-transform transform hover:shadow-[0_0_1px_1px_rgba(255,165,0,0.5)] hover:cursor-grab bg-bgLight dark:bg-bgDark">
+                            <div className="min-h-72 border p-4 rounded-md relative group transition-transform transform hover:shadow-[0_0_1px_1px_rgba(255,165,0,0.5)] hover:cursor-grab bg-bgLight dark:bg-bgDark">
                                 <h2 className="text-xl font-semibold mb-4">Provider Agnostic</h2>
                                 <p className="text-gray-400 mb-4">Provides agility, scalability, and robustness across diverse cloud platforms.</p>
-                                <Image src={'https://radius-ois.ai/wp-content/uploads/2023/10/CLOUD.png'} width={1000} height={1000} alt="Integration Capabilities" className="w-72 h-48 absolute right-0 bottom-0 transition-transform transform group-hover:scale-95" />
+                                <Image src={'https://radius-ois.ai/wp-content/uploads/2023/10/CLOUD.png'} width={1000} height={1000} alt="Integration Capabilities" className="w-72 h-40 absolute right-0 bottom-0 transition-transform transform group-hover:scale-95" />
                             </div>
                         </div>
 
-                        <div className="relative min-h-48 flex justify-between items-center p-3">
+                        <div className="relative min-h-40 flex justify-between items-center p-3">
                             <DotPattern className='z-0' />
                             <div className="relative z-10 flex justify-between w-full items-center"> 
                                     <h1 className="font-semibold text-xl text-center">Seamless Integrations for a seamless experience!</h1>
@@ -38,7 +38,7 @@ const WhyRadius: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="min-h-48 border p-4 rounded-md flex flex-col justify-between items-stretch">
+                        <div className="min-h-40 border p-4 rounded-md flex flex-col justify-between items-stretch">
                             <h2 className="text-xl font-semibold mb-4">Powering 100+ Businesses around the world</h2>
                             <div className="relative overflow-hidden w-full ">
                                 <div className="flex justify-evenly items-center animate-scroll space-x-6">
@@ -60,15 +60,15 @@ const WhyRadius: React.FC = () => {
 
                     </div>
                     <div className="w-1/3 flex flex-col justify-between items-stretch gap-2">
-                        <div className="min-h-96 border p-4 rounded-md relative group transition-transform transform hover:shadow-[0_0_1px_1px_rgba(255,165,0,0.5)] hover:cursor-grab bg-bgLight dark:bg-bgDark">
+                        <div className="min-h-72 h-full border p-4 rounded-md relative group transition-transform transform hover:shadow-[0_0_1px_1px_rgba(255,165,0,0.5)] hover:cursor-grab bg-bgLight dark:bg-bgDark">
                             <h2 className="text-xl font-semibold mb-4">Data Isolation</h2>
                             <p className="text-gray-400 mb-4">Ensure tenant data and operational isolation while adhering to industry security standards.</p>
-                            <Image src={'https://radius-ois.ai/wp-content/uploads/2023/10/stor1.png'} width={1000} height={1000} alt="Integration Capabilities" className="w-72 h-48 absolute right-0 bottom-0 transition-transform transform group-hover:scale-95" />
+                            <Image src={'https://radius-ois.ai/wp-content/uploads/2023/10/stor1.png'} width={1000} height={1000} alt="Integration Capabilities" className="w-72 h-40 absolute right-0 bottom-0 transition-transform transform group-hover:scale-95" />
                         </div>
-                        <div className="min-h-96 border p-4 rounded-md relative group transition-transform transform hover:shadow-[0_0_1px_1px_rgba(255,165,0,0.5)] hover:cursor-grab bg-bgLight dark:bg-bgDark">
+                        <div className="min-h-72 h-full border p-4 rounded-md relative group transition-transform transform hover:shadow-[0_0_1px_1px_rgba(255,165,0,0.5)] hover:cursor-grab bg-bgLight dark:bg-bgDark">
                             <h2 className="text-xl font-semibold mb-4">Integration Capabilities</h2>
                             <p className="text-gray-400 mb-4">Integrates with enterprise systems and supports custom applications on the RADIUS platform.</p>
-                            <Image src={'https://radius-ois.ai/wp-content/uploads/2023/10/stor.png'} width={1000} height={1000} alt="Integration Capabilities" className="w-72 h-48 absolute right-0 bottom-0 transition-transform transform group-hover:scale-95" />
+                            <Image src={'https://radius-ois.ai/wp-content/uploads/2023/10/stor.png'} width={1000} height={1000} alt="Integration Capabilities" className="w-72 h-40 absolute right-0 bottom-0 transition-transform transform group-hover:scale-95" />
                         </div>
                     </div>
                 </div>
