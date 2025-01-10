@@ -50,20 +50,20 @@ const Features = () => {
             {cards.map((card) => (
               <div
                 key={card.id}
-                className="block md:w-1/2 w-full min-h-80 p-6 rounded-xl cursor-grabbing"
+                className="block md:w-1/2 w-full min-h-56 p-6 rounded-xl cursor-grabbing text-center"
               >
-                <Image src={card.image} width={500} height={500} alt={card.title} className="w-20 h-20 mx-auto" />
+                <Image src={card.image} width={500} height={500} alt={card.title} className="w-12 h-12 mx-auto" />
                 <h1 className="font-semibold text-2xl mt-6">{card.title}</h1>
                 <p className="font-normal text-sm mt-2">{card.description}</p>
 
               </div>
             ))}
           </div>
-          <div className="flex md:flex-row flex-col justify-between items-center">
+          <div className="flex md:flex-row flex-col justify-between items-center text-center ">
             {cards2.map((card) => (
-              <div key={card.id} className="block max-w-sm min-h-80 p-6 rounded-xl cursor-grabbing">
+              <div key={card.id} className="block max-w-sm min-h-56 p-6 rounded-xl cursor-grabbing">
 
-                <Image src={card.image} width={500} height={500} alt={card.title} className="w-20 h-20 mx-auto hover:scale-105" />
+                <Image src={card.image} width={500} height={500} alt={card.title} className="w-12 h-12 mx-auto" priority/>
                 <h1 className="font-semibold text-2xl mt-6">{card.title}</h1>
                 <p className="font-normal text-sm mt-2">{card.description}</p>
 

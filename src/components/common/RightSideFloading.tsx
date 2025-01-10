@@ -37,64 +37,34 @@ const RightSideFloating = () => {
   return (
     <div
       ref={floatingRef}
-      className="fixed right-4 top-32 flex flex-col space-y-4 z-50"
-    >
-      {/* Call */}
-      <div
-        className={`flex items-center space-x-4 bg-bgLight dark:bg-bgDark shadow-md p-2 rounded-full cursor-pointer transform transition-all duration-400 ${
-          hovered === "call" ? "w-32" : "w-10"
-        } hover:w-48`}
-        onMouseEnter={() => setHovered("call")}
-        onMouseLeave={() => setHovered(null)}
-        onClick={() => hovered === "call" && handleClick("call")}
-      >
-        <PhoneCall className="w-6 h-6 block" />
-        <p
-          className={`whitespace-nowrap text-sm font-medium transition-all duration-300 ${
-            hovered === "call" ? "block ml-2" : "hidden"
-          }`}
-        >
-          Call Us
-        </p>
-      </div>
+      className="fixed right-2 top-32 flex flex-col space-y-4 z-50 bg-white p-2 rounded-md"
+    > 
+      {["call", "email", "meeting"].map((option) => {
+        const Icon = option === "call" ? PhoneCall : option === "email" ? Mail : Calendar1;
+        const label = option === "call" ? "Call Us" : option === "email" ? "Email Us" : "Book a Meeting";
 
-      {/* Email */}
-      <div
-        className={`flex items-center space-x-4 bg-bgLight dark:bg-bgDark shadow-md p-2 rounded-full cursor-pointer transform transition-all duration-300 ${
-          hovered === "email" ? "w-32" : "w-10"
-        } hover:w-48`}
-        onMouseEnter={() => setHovered("email")}
-        onMouseLeave={() => setHovered(null)}
-        onClick={() => hovered === "email" && handleClick("email")}
-      >
-        <Mail className="w-6 h-6" />
-        <span
-          className={`whitespace-nowrap text-sm font-medium transition-all duration-300 ${
-            hovered === "email" ? "block ml-2" : "hidden"
-          }`}
-        >
-          Email Us
-        </span>
-      </div>
-
-      {/* Book a Meeting */}
-      <div
-        className={`flex items-center space-x-4 bg-bgLight dark:bg-bgDark shadow-md p-2 rounded-full cursor-pointer transform transition-all duration-300 ${
-          hovered === "meeting" ? "w-32" : "w-10"
-        } hover:w-48`}
-        onMouseEnter={() => setHovered("meeting")}
-        onMouseLeave={() => setHovered(null)}
-        onClick={() => hovered === "meeting" && handleClick("meeting")}
-      >
-        <Calendar1 className="w-6 h-6" />
-        <span
-          className={`whitespace-nowrap text-sm font-medium transition-all duration-300 ${
-            hovered === "meeting" ? "block ml-2" : "hidden"
-          }`}
-        >
-          Book a Meeting
-        </span>
-      </div>
+        return (
+          <div
+            key={option}
+            className={`flex items-center space-x-4 bg-bgLight dark:bg-bgDark shadow-md p-2 rounded-full cursor-pointer transform transition-all duration-300 ${
+              hovered === option ? "w-32" : "w-10"
+            } hover:w-48`}
+            onMouseEnter={() => setHovered(option as OptionType)}
+            onMouseLeave={() => setHovered(null)}
+            onClick={() => hovered === option && handleClick(option as OptionType)}
+          >
+            <Icon className="w-6 h-6" />
+            <span
+              className={`whitespace-nowrap text-sm font-medium transition-all duration-300 ${
+                hovered === option ? "block ml-2" : "hidden"
+              }`}
+            >
+              {label}
+            </span>
+          </div>
+        );
+      })}
+      
     </div>
   );
 };

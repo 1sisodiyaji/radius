@@ -14,7 +14,7 @@ const Circle = forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex size-20 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        "z-10 flex size-32 items-center justify-center rounded-full border-2 bg-white p-3  ",
         className,
       )}
     >
@@ -37,10 +37,10 @@ export function AnimatedBeamDemo() {
  
   return (
     <div
-      className="relative h-[450] flex w-full items-center justify-center overflow-hidden rounded-lg"
+      className="relative h-[76vh]  flex w-full items-center justify-center overflow-hidden rounded-lg"
       ref={containerRef}
     >
-      <div className="flex size-full flex-col max-w-lg max-h-[200px] items-stretch justify-between gap-10">
+      <div className="flex size-full flex-col max-w-7xl   items-stretch justify-between gap-10">
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div1Ref}>
           <Image src={'/play-logo.svg'} width={1000} height={1000} alt="company logo" priority/>
@@ -53,10 +53,12 @@ export function AnimatedBeamDemo() {
           <Circle ref={div2Ref}>
           <Image src={'/axis.svg'} width={1000} height={1000} alt="company logo" priority/>
           </Circle>
-          <Circle ref={div4Ref} className="size-16">
-          <Image src={'/radius.svg'} width={1000} height={1000} alt="company logo" priority/>
+          <Circle ref={div4Ref} className="size-48">
+          <Image src={'https://radius-ois.ai/wp-content/uploads/2023/10/radius0logo.png'} width={1000} height={1000} alt="company logo" priority/>
           </Circle> 
-          <div  className="size-16"></div> 
+          <Circle ref={div6Ref}>
+          <Image src={'/sloop-logo-svg.svg'} width={1000} height={1000} alt="company logo" priority/>
+          </Circle> 
          
         </div>
         <div className="flex flex-row items-center justify-between">
@@ -88,6 +90,7 @@ export function AnimatedBeamDemo() {
         curvature={75}
         endYOffset={10}
       />
+        
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div5Ref}

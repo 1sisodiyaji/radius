@@ -30,7 +30,7 @@ const Hero = () => {
 
                 <div className="my-12 flex md:flex-row flex-col justify-center items-center">
 
-                    <h5 className="text-xl font-semibold text-gray-800 dark:text-white z-50">
+                    <h5 className="text-xl font-semibold text-gray-800 dark:text-white ">
                         We Have More than 50+ Partners
                     </h5>
 
