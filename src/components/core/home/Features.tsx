@@ -43,18 +43,18 @@ const Features = () => {
     <>
       <div className="relative py-12 mx-auto">
         <DotPattern className="z-0 opacity-80" />
-        <div className='z-10 relative'>
-          <h1 className='text-2xl font-semibold text-center'>Designed for both Agents and Customer</h1>
-          <div className="flex md:flex-row flex-col justify-center items-center space-x-4 mb-6">
+        <div className='z-10 relative max-w-7xl mx-auto'>
+          <h1 className='md:text-4xl font-semibold text-center'>Designed for both Agents and Customer</h1>
+          <div className="flex md:flex-row flex-col justify-center items-center space-x-4 mb-6 mt-12">
 
             {cards.map((card) => (
               <div
                 key={card.id}
                 className="block md:w-1/2 w-full min-h-80 p-6 rounded-xl cursor-grabbing"
               >
-                <Image src={card.image} width={500} height={500} alt={card.title} className="w-32 h-32 mx-auto" />
-                <h1 className="font-semibold text-2xl mt-10">{card.title}</h1>
-                <p className="font-normal text-md mt-2">{card.description}</p>
+                <Image src={card.image} width={500} height={500} alt={card.title} className="w-20 h-20 mx-auto" />
+                <h1 className="font-semibold text-2xl mt-6">{card.title}</h1>
+                <p className="font-normal text-sm mt-2">{card.description}</p>
 
               </div>
             ))}
@@ -63,9 +63,9 @@ const Features = () => {
             {cards2.map((card) => (
               <div key={card.id} className="block max-w-sm min-h-80 p-6 rounded-xl cursor-grabbing">
 
-                <Image src={card.image} width={500} height={500} alt={card.title} className="w-32 h-32 mx-auto hover:scale-105" />
-                <h1 className="font-semibold text-2xl mt-10">{card.title}</h1>
-                <p className="font-normal text-md mt-2">{card.description}</p>
+                <Image src={card.image} width={500} height={500} alt={card.title} className="w-20 h-20 mx-auto hover:scale-105" />
+                <h1 className="font-semibold text-2xl mt-6">{card.title}</h1>
+                <p className="font-normal text-sm mt-2">{card.description}</p>
 
               </div>
             ))}

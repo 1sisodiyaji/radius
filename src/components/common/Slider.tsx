@@ -88,7 +88,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
               alt={`Slide ${index + 1}`}
               width={1000}
               height={1000}
-              className={`${isHovered ? 'scale-105' : ''} `}
+              className={`${isHovered ? ' ' : ''} `}
             />
           </div>
         ))}

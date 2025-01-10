@@ -72,4 +72,13 @@ body::-webkit-scrollbar{
   body {
     @apply bg-background text-foreground;
   }
+}  
+
+.scrollbar-none {
+  -ms-overflow-style: none; 
+  scrollbar-width: none !important;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }

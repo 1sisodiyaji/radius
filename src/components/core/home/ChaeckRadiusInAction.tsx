@@ -8,19 +8,19 @@ const ChaeckRadiusInAction = () => {
     return (
         <div className='space-y-6'>
             <div className="text-center mb-8">
-                    <h1 className="uppercase text-xl text-orange-500 text-center ">Action</h1>
-                    <h2 className='md:text-4xl capitalize font-semibold'>Check RADIUS-OIS in Action</h2>
+                    <h1 className="uppercase text-xl text-orange-500 text-center mb-4">Action</h1>
+                    <h2 className='md:text-4xl capitalize font-semibold mb-4'>Check RADIUS-OIS in Action</h2>
                 </div>
             <div className="flex md:flex-row flex-col gap-2 justify-between items-stretch md:space-x-4">
                 <div className="flex flex-col gap-2">
                     <div className="block md:max-w-sm min-h-72 space-y-10 p-6 border border-gray-200 rounded-lg hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer">
                         <h1 className="font-semibold text-2xl text-center">Multi Tenant <br /> Security</h1>
-                        <p className="font-normal text-md">Relax with trusted security standards, encryption, logical isolation, and experts keeping your data secure 24/7.</p>
+                        <p className="font-normal text-sm">Relax with trusted security standards, encryption, logical isolation, and experts keeping your data secure 24/7.</p>
                     </div>
 
                     <div className="block md:max-w-sm min-h-72 space-y-10 p-6 border border-gray-200 rounded-lg hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer">
                         <h1 className="font-semibold text-2xl text-center">Digital Customer Experience</h1>
-                        <p className="font-normal text-md">Enable agents to effortlessly track customer conversations across WhatsApp, Facebook Messenger within a unified workspace, making their job more efficient.</p>
+                        <p className="font-normal text-sm">Enable agents to effortlessly track customer conversations across WhatsApp, Facebook Messenger within a unified workspace, making their job more efficient.</p>
                     </div>
                 </div>
 

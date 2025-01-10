@@ -4,7 +4,7 @@ import React from "react";
 
 const Testimonials = () => {
     return (
-        <div className="bg-bgLight dark:bg-bgDark md:p-8 py-4 md:py-0 rounded-3xl max-w-6xl mx-auto">
+        <div className="bg-bgLight dark:bg-bgDark md:p-8 py-4  rounded-3xl max-w-6xl mx-auto">
 
             <div className="text-center mb-8">
                 <h1 className="uppercase text-xl text-orange-500 text-center ">Testimonial</h1>

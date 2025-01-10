@@ -64,7 +64,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`bg-gray-50 dark:bg-gray-950 fixed w-full z-20 top-0 start-0 ${isScrolled ? "shadow-sm" : "shadow-0"}`}>
+      <nav className={` fixed w-full z-50 top-0 start-0 ${isScrolled ? "shadow-sm bg-gray-50 dark:bg-gray-950" : "shadow-0 bg-transparent"}`}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
           <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             {isDarkMode ?

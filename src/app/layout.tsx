@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css"; 
 import { Toaster } from "react-hot-toast";
+import RightSideFloading from "@/components/common/RightSideFloading";
+import Chatbot from "@/components/common/Chatbot";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,6 +27,8 @@ export default function RootLayout({
         className={`${poppins.variable} antialiased bg-gray-50 dark:bg-gray-950`}
       > 
       <Toaster/>
+      <Chatbot/>
+      <RightSideFloading/>
       {children}
       </body>
     </html>

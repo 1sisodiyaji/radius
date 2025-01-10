@@ -2,11 +2,11 @@
 
 import Link from 'next/link';
 import React from 'react'; 
-import { Phone, Mail, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-gray-50 shadow-md dark:bg-gray-900 text-black dark:text-white py-10">
+        <footer className="bg-bgLight shadow-md dark:bg-bgDark text-black dark:text-white py-12">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8 px-6">
 
                 <div>
@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
                     RADIUS is cloud based omnichannel interaction system
                     that is powerful, intelligent, secure, and easy to use.
                     </p>
-                    <button className="mt-4 px-4 py-2 bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 text-orange-600 font-medium rounded-md dark:hover:bg-gray-200">
+                    <button className="mt-4 px-4 py-2 bg-gray-200 hover:bg-gray-300 dark:bg-gray-900 text-orange-600 font-medium rounded-md dark:hover:bg-gray-200">
                         Request A Demo
                     </button>
                 </div>
@@ -48,23 +48,7 @@ const Footer: React.FC = () => {
                     </ul>
                 </div>
 
-                <div className="container mx-auto grid grid-cols-1 gap-6">
-                    <div className="bg-orange-200 hover:bg-orange-400 dark:bg-gray-600 p-4 rounded-md">
-                        <h5 className="font-semibold flex gap-2"><Phone size={18} /> Call Us Directly At</h5>
-                        <p className="mt-1">+91 80691 30844</p>
-                        <button className="w-full mt-4 px-4 py-2 bg-white text-orange-600 font-medium rounded-md hover:bg-gray-200">
-                            Contact Us
-                        </button>
-                    </div>
-                    <div className="bg-orange-200 hover:bg-orange-400 dark:bg-gray-600  p-4 rounded-md">
-                        <h5 className="font-semibold flex gap-2"><Mail size={18} /> Chat With Our Team</h5>
-                        <p className="mt-1 font-medium">hello@radius-ois.ai</p>
-                        <button className="w-full mt-4 px-4 py-2 bg-white text-orange-600 font-medium rounded-md hover:bg-gray-200">
-                            Contact Us
-                        </button>
-                    </div>
-                </div>
-
+                
             </div>
             <div className=" mt-8 flex flex-col md:flex-row items-center justify-between px-6">
                 <p>Copyright © 2024 RADIUS. All rights reserved.</p>

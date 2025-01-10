@@ -1,4 +1,4 @@
-import { AnimatedBeamMultipleOutputDemo } from '@/components/common/Coonecting'
+import { AnimatedBeamDemo } from '@/components/common/Coonecting'
 import { AnimatedTooltip } from '@/components/ui/animated-tooltip'
 import ShimmerButton from '@/components/ui/shimmer-button'
 import Link from 'next/link'
@@ -39,23 +39,20 @@ const OurProducts = () => {
         <div>
             <h1 className="uppercase text-xl text-orange-500 text-center mb-4">Our Product</h1>
 
-            <div className="flex md:flex-row flex-col justify-center items-center w-full">
-                <div className="flex flex-col justify-center items-stretch md:w-1/2 w-full"> 
+            <div className="flex md:flex-row flex-col justify-center items-center w-full"> 
+                   
                     <section>
                         <h1 className="mb-4 text-2xl font-extrabold tracking-tight leading-none">We invest in the world’s potential</h1>
                         <p className="mb-8 text-lg font-normal  ">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
                         <div className="flex   justify-start items-center gap-4">
-                            <Link href={'/meeting'}>  <ShimmerButton shimmerColor="#f76716" text="Request a Customize Demo" className='text-white dark:text-white text-[10px] md:text-sm ' /> </Link>
+                            <Link href={'/meeting'}>  <ShimmerButton shimmerColor="#f76716" text="See Our Products" className='text-white dark:text-white text-[10px] md:text-sm ' /> </Link>
                            <div className="flex"><AnimatedTooltip items={clients}/>  </div>
                             
                         </div>
 
                         
-                    </section> 
-                </div>
-                <div className="flex justify-center items-center md:w-1/2 w-full">
-                    <AnimatedBeamMultipleOutputDemo />
-                </div>
+                    </section>  
+                     <AnimatedBeamDemo />
             </div>
         </div>
     )
